@@ -1,6 +1,0 @@
-<?php
-
-$jugadores = array();
-
-
-?>
