@@ -14,19 +14,12 @@ function rellenarCartones(&$jugadores){
             $jugadores[$jugador]["Carton" . $i+1] = array("numeros" => crearCartones(), "aciertos" => 0);
         }
          
-function rellenarCartones(&$array){
-    foreach ($array as $jugadores => &$value) {
-        for ($i=0; $i < 3 ; $i++) { 
-            $value[$i] = crearCartones();
-        }
     }
 }
 
 function crearCartones() {
     $carton = array();
     $usados = array();
-    $carton = [];
-    $usados = [];
 
     for ($j = 0; $j < 3; $j++) {
         for ($k = 0; $k < 5; $k++) {
@@ -117,11 +110,6 @@ function imprimirJug(&$jugadores , $bomb){
     
     visualizarGanadores($jugadores); // muestra por pantalla los ganadores y el carton ganador
 
-function imprimirJug($bomb, $jugadores){
-
-    $bomb=shuffle($bomb);
-
-
 }
 
 
@@ -135,4 +123,3 @@ function test_input($data) {
 }
 
 ?>
-}
