@@ -103,13 +103,12 @@ function imprimirJug(&$jugadores , $bomb){
     shuffle($bomb);
 
     echo "<pre>";
-    print_r($bomb);
+    print_r($bomb); // visualizo el bombo
     echo "</pre>";
 
-    contarAciertos($jugadores, $bomb);
+    contarAciertos($jugadores, $bomb);//ejecuta el sorteo
     
-    visualizarGanadores($jugadores);
-    //print_r($bomb);
+    visualizarGanadores($jugadores); // muestra por pantalla los ganadores y el carton ganador
 
 }
 
