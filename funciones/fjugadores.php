@@ -34,7 +34,10 @@ function crearCartones() {
 }
 
 function imprimirJug($bomb, $jugadores){
-    
+
+    $bomb=shuffle($bomb);
+
+
 }
 
 
