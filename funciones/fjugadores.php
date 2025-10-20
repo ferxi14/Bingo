@@ -11,7 +11,7 @@ function rellenarBombo(){
 function rellenarCartones(&$jugadores){
     foreach ($jugadores as $jugador => &$datosJugador) {
         for ($i=0; $i < 3 ; $i++) { 
-            $jugadores[$jugador]["Carton" . $i+1] = array("numeros" => crearCartones(), "aciertos" => 0);
+            $jugadores[$jugador]["Carton" . ($i+1)] = array("numeros" => crearCartones(), "aciertos" => 0);
         }
          
     }
