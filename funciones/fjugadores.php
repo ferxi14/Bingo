@@ -8,9 +8,9 @@ function rellenarBombo(){
     return $relleno;
 } 
 
-function rellenarCartones(&$jugadores){
+function rellenarCartones(&$jugadores, $numCart){
     foreach ($jugadores as $jugador => &$datosJugador) {
-        for ($i=0; $i < 3 ; $i++) { 
+        for ($i=0; $i < $numCart ; $i++) { 
             $jugadores[$jugador]["Carton" . ($i+1)] = array("numeros" => crearCartones(), "aciertos" => 0);
         }
          

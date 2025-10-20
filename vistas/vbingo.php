@@ -2,14 +2,19 @@
 include("../funciones/fjugadores.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $n1=test_input($_POST["jugador1"]);
-    $n2=test_input($_POST["jugador2"]);
-    $n3=test_input($_POST["jugador3"]);
-    $n4=test_input($_POST["jugador4"]);
 
-    $jugadores=array($n1=>array(),$n2=>array(),$n3=>array(),$n4=>array());
+    $numJuga = intval(test_input($_POST["numJugadores"]));
+    $numCart = intval(test_input($_POST["numCartas"]));
 
-    rellenarCartones($jugadores);
+    $jugadores = array();
+
+    for ($i=0; $i < $numJuga ; $i++) { 
+        $jugadores["jugador" . ($i+1)] = array(); 
+    }
+
+
+
+    rellenarCartones($jugadores , $numCart);
 
     $bombo=rellenarBombo();
 
@@ -22,17 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     print_r($jugadores);
     echo "</pre>";
     
-$n1=test_input($_POST["jugador1"]);
-$n2=test_input($_POST["jugador2"]);
-$n3=test_input($_POST["jugador3"]);
-$n4=test_input($_POST["jugador4"]);
 
-$jugadores=array($n1=>array(),$n2=>array(),$n3=>array(),$n4=>array());
 
-rellenarCartones($jugadores);
 
-$bombo=rellenarBombo();
-
-imprimirJug($bombo,$jugadores);
 }
 ?>
