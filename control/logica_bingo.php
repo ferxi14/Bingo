@@ -13,6 +13,6 @@ rellenarCartones($jugadores);
 
 $bombo=rellenarBombo();
 
-imprimirJug($bombo,$jugadores);
+imprimirJug($jugadores, $bombo);
 }
 ?>
